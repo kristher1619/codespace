@@ -3,8 +3,9 @@
     "service": "laravel.test",
     "dockerComposeFile": "../docker-compose.yml",
     "workspaceFolder": "/var/www/html",
-    "postCreateCommand": ["cp .env.example .env", "php artisan key:generate"],
+    "postCreateCommand": ["php artisan key:generate"],
     "settings": {},
     "extensions": [],
-    "remoteUser": "sail"
+    "remoteUser": "sail",
+    "forwardPorts": [80, 5173]
 }
