@@ -1,1 +1,9 @@
-{"image":"mcr.microsoft.com/devcontainers/universal:2"}
+{
+    "name": "Codespace Testing",
+    "image":"mcr.microsoft.com/devcontainers/universal:2",
+    "service": "laravel.test",
+    "workspaceFolder": "/var/www/html",
+    "settings": {},
+    "extensions": [],
+    "remoteUser": "vscode"
+}
