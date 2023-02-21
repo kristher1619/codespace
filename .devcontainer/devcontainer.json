@@ -3,9 +3,41 @@
     "service": "laravel.test",
     "dockerComposeFile": "../docker-compose.yml",
     "workspaceFolder": "/var/www/html",
-    "postCreateCommand": ["php artisan key:generate"],
+    "postCreateCommand": [
+        "composer install",
+        "cp .env .env.example",
+        "npm install",
+        "php artisan key:generate"
+    ],
     "settings": {},
     "extensions": [],
     "remoteUser": "sail",
-    "forwardPorts": [80, 5173]
+    "forwardPorts": [80, 5173],
+    "features": {
+        "ghcr.io/devcontainers/features/common-utils:2": {
+            "version": "latest"
+        }
+    },
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "bmewburn.vscode-intelephense-client",
+                "Vue.volar",
+                "johnsoncodehk.vscode-typescript-vue-plugin",
+                "dbaeumer.vscode-eslint",
+                "bradlc.vscode-tailwindcss",
+                "rintoj.json-organizer",
+                "heybourn.headwind",
+                "MehediDracula.php-namespace-resolver",
+                "xdebug.php-debug",
+                "stef-k.laravel-goto-controller",
+                "codingyu.laravel-goto-view",
+                "amiralizadeh9480.laravel-extra-intellisense",
+                "mikestead.dotenv",
+                "GraphQL.vscode-graphql",
+                "jock.svg",
+                "syler.sass-indente"
+            ]
+        }
+    }
 }
